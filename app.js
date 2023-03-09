@@ -3,8 +3,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const ejs = require("ejs");
-const passport = require("passport")
-const session = require("express-session")
+const passport = require("passport");
+const session = require("express-session");
+const MongoDBStore = require("express-mongodb-session")(session);
 const passportLocal = require("passport-local");
 const passportLocalMongoose = require("passport-local-mongoose");
 const findOrCreate = require("mongoose-findorcreate");
@@ -15,15 +16,23 @@ const { tailordata } = require("./public/testdata/tailordata.js");
 const { hmuadata } = require("./public/testdata/hmuadata.js");
 const { bridalcardata } = require("./public/testdata/bridalcardata.js");
 
-
 const app = express();
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use(session({
+const store = new MongoDBStore({
+    uri: `${process.env.MONGO_URI}`,
+    collection: 'sessions'
+});
+
+app.use(require('express-session')({
     secret: process.env.secret,
+    cookie: {
+        maxAge: 1000 * 60 * 60 * 24 * 7 // 1 week
+      },
+    store: store,
     resave: false,
     saveUninitialized: false
 }));
@@ -32,7 +41,15 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 mongoose.set("strictQuery", true);
-mongoose.connect(process.env.DATABASE_URL);
+const connectDB = async () => {
+    try {
+      const conn = await mongoose.connect(`${process.env.MONGO_URI}`, { useNewUrlParser: true });
+      console.log(`MongoDB Connected: ${conn.connection.host}`);
+    } catch (error) {
+      console.log(error);
+      process.exit(1);
+    }
+}
 // mongoose.connect("mongodb://127.0.0.1:27017/wbDB");
 
 const userSchema = new mongoose.Schema({
@@ -895,6 +912,8 @@ app.get("/logout", function(req, res){
     })
 });
 
-app.listen(port, function(){
-    console.log("Server successfully started on Port" + port);
+connectDB().then(() => {
+    app.listen(port, function(){
+        console.log("Server successfully started on Port" + port);
+    });
 });
