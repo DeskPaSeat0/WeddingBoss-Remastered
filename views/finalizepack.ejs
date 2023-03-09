@@ -1,0 +1,96 @@
+<%- include("partials/header") %>
+
+<div class="body">
+    <section id="finalize-package-section">
+        <form action="/finalizepack" method="POST">
+            <h1 class="finalize-package-heading">Package Summary</h1>
+            <div class="row summary-container">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col text-center my-auto">
+                            <h3 class="finalize-item-heading">Venue:</h3>
+                        </div>
+                        <div class="col text-center my-auto">
+                            <p class="finalize-item-content"><%=packDetails.chosenVenue%></p>
+                        </div>
+                    </div>
+                    <hr class="finalize-hr">
+                    <div class="row">
+                        <div class="col text-center my-auto">
+                            <h3 class="finalize-item-heading">Photographer:</h3>
+                        </div>
+                        <div class="col text-center my-auto">
+                            <p class="finalize-item-content"><%=packDetails.chosenPhoto%></p>
+                        </div>
+                    </div>
+                    <hr class="finalize-hr">
+                    <div class="row">
+                        <div class="col text-center my-auto">
+                            <h3 class="finalize-item-heading">Tailor:</h3>
+                        </div>
+                        <div class="col text-center my-auto">
+                            <p class="finalize-item-content"><%=packDetails.chosenTailor%></p>
+                        </div>
+                    </div>
+                    <hr class="finalize-hr">
+                    <div class="row">
+                        <div class="col text-center my-auto">
+                            <h3 class="finalize-item-heading">Bridal Makeup:</h3>
+                        </div>
+                        <div class="col text-center my-auto">
+                            <p class="finalize-item-content"><%=packDetails.chosenHmua%></p>
+                        </div>
+                    </div>
+                    <hr class="finalize-hr">
+                    <div class="row">
+                        <div class="col text-center my-auto">
+                            <h3 class="finalize-item-heading">Bridal Car Rental:</h3>
+                        </div>
+                        <div class="col text-center my-auto">
+                            <p class="finalize-item-content"><%=packDetails.chosenBridalcar%></p>
+                        </div>
+                    </div>
+                    <hr class="finalize-hr">
+                    <div class="row">
+                        <div class="col text-center my-auto">
+                            <h3 class="finalize-item-heading">Package Type:</h3>
+                        </div>
+                        <div class="col text-center my-auto">
+                            <p class="finalize-item-content"><%=packDetails.chosenPackType%></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-container">
+                <div>
+                    <label for="weddingDate" class="form-label">Wedding Date:</label>
+                    <input type="date" name="wedDate" id="weddingDate" required/>
+                    <div class="form-text">
+                        Your Wedding Date must be atleast 3 to 4 weeks after the Appointment Date to ensure the availability of services. 
+                    </div>
+                </div>
+                <div>
+                    <label for="appointmentDateInput" class="form-label">Appointment Date:</label>
+                    <input type="date" name="appDate" id="appointmentDate" required/>
+                    <div class="form-text">
+                        Your Wedding Date must be atleast 3 to 4 weeks after the Appointment Date to ensure the availability of services. 
+                    </div>
+                </div>
+                <div class="col-lg-8 mx-auto">
+                    <label class="blocked-label" for="venueSuggestion">Additional Instructions:</label>
+                    <textarea class="custom-textarea" name="finalAddInfo" id="finalAddInfo"></textarea>
+                </div>
+                <input type="hidden" name="Venues" value="<%=packDetails.chosenVenue%>">
+                <input type="hidden" name="Photos" value="<%=packDetails.chosenPhoto%>">
+                <input type="hidden" name="Tailors" value="<%=packDetails.chosenTailor%>">
+                <input type="hidden" name="Hmuas" value="<%=packDetails.chosenHmua%>">
+                <input type="hidden" name="Bridalcars" value="<%=packDetails.chosenBridalcar%>">
+                <input type="hidden" name="packType" value="<%=packDetails.chosenPackType%>">
+            </div>
+            <div class="button-section">
+                <button type="submit" class="btn btn-lg btn-primary col-lg-4 mx-auto finalize-button">Confirm Package</button>
+                <a class="btn btn-lg btn-primary col-lg-4 finalize-button mx-auto" href="cancelpack" role="button">Cancel Package</a>
+            </div>
+        </form>
+    </section>
+</div>

@@ -1,0 +1,32 @@
+<%- include("partials/header") %>
+
+<div class="body">
+    <section class="colored-section">
+        <div class="form-container-fluid">
+            <div class="row">
+                <div class="card col-sm-12">
+                    <div class="card-body">
+                        <form action="/login" method="POST">
+                            <img class="WBlogo" src="images/WeddingBossLogo.png" alt="Logo here">
+                            <h1 class="mb-4 h1-heading">Login</h1>
+                            <div class="main-form-group">
+                                <div class="form-group mt-2">
+                                    <label>Email Address</label>
+                                    <input name="username" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                </div>
+                                <div class="form-group mt-2">
+                                    <label for="floatingPassword">Password</label>
+                                    <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-lg btn-primary col-6 mx-auto mb-4 login-register-btn">Login</button>
+                            <a class="btn btn-lg btn-primary col-6 mx-auto login-register-btn" href="register" role="button">Register</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<%- include("partials/footer") %>

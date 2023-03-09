@@ -1,0 +1,292 @@
+<%- include("partials/header") %>
+
+<div class="body">
+    <section id="custom-package-page" class="special-light-section">
+        <form action="/selectcustompack" method="POST">
+            <div class="services-container-fluid">
+                <h1 class="premade-heading">Customize Your Own Package</h1>
+                <div class="row">
+                    <div class="col-lg-5 mx-auto my-auto">
+                        <!--Venues-->
+                        <div class="card justify-content-around">
+                            <h3>Venues</h3>
+                            <div id="venueSlides" class="carousel slide">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#venueSlides" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#venueSlides" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#venueSlides" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#venueSlides" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                    <button type="button" data-bs-target="#venueSlides" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                    <button type="button" data-bs-target="#venueSlides" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <% var i = 0; %>
+                                    <% venues.forEach((venue, index) => { i++%>
+                                        <% if(venue.key > 1) { %>
+                                            <div class="<%= i === 2 ? "carousel-item active" : "carousel-item" %>">
+                                                <div class="attribution3">
+                                                    <h6 class="light2">Photo by <a href="https://unsplash.com/@arshadpooloo">Arshad Pooloo</a> on <a href="https://unsplash.com/photos/GdwWrLHdwpw">Unsplash</a></h6>
+                                                </div>
+                                                <img src="<%=venue.serviceImage %>" class="service-custom-image" alt="bruh">
+                                                <div class="service-caption d-block">
+                                                    <h5 class="custompack-name"><%=venue.name%></h5>
+                                                    <p class="custompack-description"><%=venue.description%></p>
+                                                </div>
+                                            </div>
+                                        <% } %>
+                                    <% }) %>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#venueSlides" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#venueSlides" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                                <div class="card-body">
+                                    <label for="specVenue">Select a Venue: </label>
+                                    <select name="tVenues" id="selVenue">
+                                        <% venues.forEach((venue, index) => { i++%>
+                                            <option value="<%=index + 1%>"><%=venue.name%></option>
+                                        <% }) %>
+                                    </select>
+                                    <!-- <div class="col-lg-12">
+                                        <label class="blocked-label" for="venueSuggestion">Additional Instructions:</label>
+                                        <textarea class="custom-textarea" name="venueSuggestion" id="venueSuggestion"></textarea>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Photographers-->
+                    <div class="col-lg-5 mx-auto my-auto">
+                        <div class="card">
+                            <h3>Photographers</h3>
+                            <div id="photoSlides" class="carousel slide">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#photoSlides" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#photoSlides" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#photoSlides" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#photoSlides" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                    <button type="button" data-bs-target="#photoSlides" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                    <button type="button" data-bs-target="#photoSlides" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <% var i = 0; %>
+                                    <% photos.forEach((photo, index) => { i++%>
+                                        <% if(photo.key > 1) { %>
+                                            <div class="<%= i === 2 ? "carousel-item active" : "carousel-item" %>">
+                                                <div class="attribution3">
+                                                    <h6 class="light2">Photo by <a href="https://unsplash.com/@annajimenez">
+                                                        Anna Jiménez Calaf</a> on <a href="https://unsplash.com/photos/0JnbLFcriM4">Unsplash</a></h6>
+                                                </div>
+                                                <img src="<%=photo.serviceImage %>" class="service-custom-image1" alt="bruh">
+                                                <div class="service-caption d-block">
+                                                    <h5 class="custompack-name"><%=photo.name%></h5>
+                                                    <p class="custompack-description"><%=photo.description%></p>
+                                                </div>
+                                            </div>
+                                        <% } %>
+                                    <% }) %>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#photoSlides" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#photoSlides" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                                <div class="card-body">
+                                    <label for="specPhoto">Select a Photographer</label>
+                                    <select name="tPhotos" id="selPhoto">
+                                        <% photos.forEach((photo, index) => { i++%>
+                                            <option value="<%=index + 1%>"><%=photo.name%></option>
+                                        <% }) %>
+                                    </select>
+                                    <!-- <div class="col-lg-12">
+                                        <label class="blocked-label" for="photoSuggestion">Additional Instructions:</label>
+                                        <textarea class="custom-textarea" name="photoSuggestion" id="photoSuggestion"></textarea>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 mx-auto">
+                        <!--Tailors-->
+                        <div class="card">
+                            <h3>Tailors</h3>
+                            <div id="tailorSlides" class="carousel slide">
+                                <div class="carousel-indicators special-indicators">
+                                    <button type="button" data-bs-target="#tailorSlides" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#tailorSlides" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#tailorSlides" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#tailorSlides" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                    <button type="button" data-bs-target="#tailorSlides" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                    <button type="button" data-bs-target="#tailorSlides" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <% var i = 0; %>
+                                    <% tailors.forEach((tailor, index) => { i++%>
+                                        <% if(tailor.key > 1) { %>
+                                            <div class="<%= i === 2 ? "carousel-item active" : "carousel-item" %>">
+                                                <div class="attribution3">
+                                                    <h6 class="light2">Photo by <a href="https://unsplash.com/@annaclare97">
+                                                        Anna Docking</a> on <a href="https://unsplash.com/photos/p7v6X41PP4w">Unsplash</a></h6>
+                                                </div>
+                                                <img src="<%=tailor.serviceImage %>" class="service-custom-image" alt="bruh">
+                                                <div class="service-caption d-block">
+                                                    <h5 class="custompack-name"><%=tailor.name%></h5>
+                                                    <p class="custompack-description"><%=tailor.description%></p>
+                                                </div>
+                                            </div>
+                                        <% } %>
+                                    <% }) %>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#tailorSlides" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#tailorSlides" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                                <div class="card-body">
+                                    <label for="specTailor">Select a Tailor</label>
+                                    <select name="tTailors" id="selTailor">
+                                        <% tailors.forEach((tailor, index) => { i++%>
+                                            <option value="<%=index + 1%>"><%=tailor.name%></option>
+                                        <% }) %>
+                                    </select>
+                                    <!-- <div class="col-lg-12">
+                                        <label class="blocked-label" for="tailorSuggestion">Additional Instructions:</label>
+                                        <textarea class="custom-textarea" name="tailorSuggestion" id="tailorSuggestion"></textarea>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--HMUAs-->
+                    <div class="col-lg-5 mx-auto">
+                        <div class="card">
+                            <h3>Bridal Makeup Artists</h3>
+                            <div id="hmuaSlides" class="carousel slide">
+                                <div class="carousel-indicators special-indicators">
+                                    <button type="button" data-bs-target="#hmuaSlides" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#hmuaSlides" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#hmuaSlides" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#hmuaSlides" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                    <button type="button" data-bs-target="#hmuaSlides" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                    <button type="button" data-bs-target="#hmuaSlides" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <% var i = 0; %>
+                                    <% hmuas.forEach((hmua, index) => { i++%>
+                                        <% if(hmua.key > 1) { %>
+                                            <div class="<%= i === 2 ? "carousel-item active" : "carousel-item" %>">
+                                                <div class="attribution3">
+                                                    <h6 class="light2">Photo by <a href="https://unsplash.com/@freestocks">
+                                                        freestocks</a> on <a href="https://unsplash.com/photos/AFvUO61NlOU">Unsplash</a></h6>
+                                                </div>
+                                                <img src="<%=hmua.serviceImage %>" class="service-custom-image" alt="bruh">
+                                                <div class="service-caption d-block">
+                                                    <h5 class="custompack-name"><%=hmua.name%></h5>
+                                                    <p class="custompack-description"><%=hmua.description%></p>
+                                                </div>
+                                            </div>
+                                        <% } %>
+                                    <% }) %>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#hmuaSlides" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#hmuaSlides" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                                <div class="card-body">
+                                    <label for="specHmua">Select an Artist</label>
+                                    <select name="tHmuas" id="selHmua">
+                                        <% hmuas.forEach((hmua, index) => { i++%>
+                                            <option value="<%=index + 1%>"><%=hmua.name%></option>
+                                        <% }) %>
+                                    </select>
+                                    <!-- <div class="col-lg-12">
+                                        <label class="blocked-label" for="hmuaSuggestion">Additional Instructions:</label>
+                                        <textarea class="custom-textarea" name="hmuaSuggestion" id="hmuaSuggestion"></textarea>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 mx-auto">
+                        <!--Bridal Car Rentals-->
+                        <div class="card">
+                            <h3>Bridal Car Rentals</h3>
+                            <div id="bridalcarSlides" class="carousel slide">
+                                <div class="carousel-indicators special-indicators">
+                                    <button type="button" data-bs-target="#bridalcarSlides" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#bridalcarSlides" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#bridalcarSlides" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#bridalcarSlides" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                    <button type="button" data-bs-target="#bridalcarSlides" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                    <button type="button" data-bs-target="#bridalcarSlides" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <% var i = 0; %> 
+                                    <% bridalcars.forEach((bridalcar, index) => { i++%>
+                                        <% if(bridalcar.key > 1) { %>
+                                            <div class="<%= i === 2 ? "carousel-item active" : "carousel-item" %>">
+                                                <div class="attribution3">
+                                                    <h6 class="light2">Photo by <a href="https://unsplash.com/@wedding_dreamz">
+                                                        Wedding Dreamz</a> on <a href="https://unsplash.com/photos/3T_17MM8AYw">Unsplash</a></h6>
+                                                </div>
+                                                <img src="<%=bridalcar.serviceImage %>" class="service-custom-image" alt="bruh">
+                                                <div class="service-caption d-block">
+                                                    <h5 class="custompack-name"><%=bridalcar.name%></h5>
+                                                    <p class="custompack-description"><%=bridalcar.description%></p>
+                                                </div>
+                                            </div>
+                                        <% } %>
+                                    <% }) %>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#bridalcarSlides" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#bridalcarSlides" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                                <div class="card-body">
+                                    <label for="specBridalcar">Select a Rental Service</label>
+                                    <select name="tBridalcars" id="selBridalcar">
+                                        <% bridalcars.forEach((bridalcar, index) => { i++%>
+                                            <option value="<%=index + 1%>"><%=bridalcar.name%></option>
+                                        <% }) %>
+                                    </select>
+                                    <!-- <div class="col-lg-12">
+                                        <label class="blocked-label" for="bridalcarSuggestion">Additional Instructions:</label>
+                                        <textarea class="custom-textarea" name="bridalcarSuggestion" id="bridalcarSuggestion"></textarea>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" name="tpackType" id="packType" value="Custom">
+            <div class="button-section">
+                <button type="submit" class="btn btn-lg btn-primary col-lg-4 finalize-button">Finalize Package</button>
+            </div>
+        </form>
+    </section>
+</div>

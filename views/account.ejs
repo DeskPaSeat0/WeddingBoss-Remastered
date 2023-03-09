@@ -1,0 +1,98 @@
+<%- include("partials/header") %>
+
+<div class="body">
+    <section id="account-page">
+        <div class="account-image">
+            <img class="account-WBlogo" src="images/WeddingBossLogo.png" alt="Logo here">
+        </div>
+        <div class="account-container">
+            <div class="row">
+                <h2><%=userDetails.username%></h2>
+            </div>
+            <div class="row account-summary-container">
+                <div class="col-lg-12 ">
+                    <div class="row">
+                        <div class="col text-center my-auto">
+                            <h3 class="finalize-item-heading">Venue:</h3>
+                        </div>
+                        <div class="col text-center my-auto">
+                            <p class="finalize-item-content"><%=userPackDetails.chosenVenue%></p>
+                        </div>
+                    </div>
+                    <hr class="finalize-hr">
+                    <div class="row">
+                        <div class="col text-center my-auto">
+                            <h3 class="finalize-item-heading">Photographer:</h3>
+                        </div>
+                        <div class="col text-center my-auto">
+                            <p class="finalize-item-content"><%=userPackDetails.chosenPhoto%></p>
+                        </div>
+                    </div>
+                    <hr class="finalize-hr">
+                    <div class="row">
+                        <div class="col text-center my-auto">
+                            <h3 class="finalize-item-heading">Tailor:</h3>
+                        </div>
+                        <div class="col text-center my-auto">
+                            <p class="finalize-item-content"><%=userPackDetails.chosenTailor%></p>
+                        </div>
+                    </div>
+                    <hr class="finalize-hr">
+                    <div class="row">
+                        <div class="col text-center my-auto">
+                            <h3 class="finalize-item-heading">Bridal Makeup:</h3>
+                        </div>
+                        <div class="col text-center my-auto">
+                            <p class="finalize-item-content"><%=userPackDetails.chosenHmua%></p>
+                        </div>
+                    </div>
+                    <hr class="finalize-hr">
+                    <div class="row">
+                        <div class="col text-center my-auto">
+                            <h3 class="finalize-item-heading">Bridal Car Rental:</h3>
+                        </div>
+                        <div class="col text-center my-auto">
+                            <p class="finalize-item-content"><%=userPackDetails.chosenBridalcar%></p>
+                        </div>
+                    </div>
+                    <hr class="finalize-hr">
+                    <div class="row">
+                        <div class="col text-center my-auto">
+                            <h3 class="finalize-item-heading">Package Type:</h3>
+                        </div>
+                        <div class="col text-center my-auto">
+                            <p class="finalize-item-content"><%=userPackDetails.chosenPackType%></p>
+                        </div>
+                    </div>
+                    <hr class="finalize-hr">
+                    <div class="row">
+                        <div class="col text-center my-auto">
+                            <h3 class="finalize-item-heading">Wedding Date:</h3>
+                        </div>
+                        <div class="col text-center my-auto">
+                            <p class="finalize-item-content"><%=userPackDetails.weddingDate%></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-center my-auto">
+                            <h3 class="finalize-item-heading">Appointment Date:</h3>
+                        </div>
+                        <div class="col text-center my-auto">
+                            <p class="finalize-item-content"><%=userPackDetails.appointDate%></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-center my-auto">
+                            <h3 class="finalize-item-heading">Additional Info:</h3>
+                        </div>
+                        <div class="col text-center my-auto">
+                            <p class="finalize-item-content"><%=userPackDetails.addInfo%></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<%- include("partials/footer") %>

@@ -1,0 +1,309 @@
+<%- include("partials/header") %>
+
+<div class="body">
+    <section id="premade-package-page" class="special-light-section">
+        <div class="container-fluid">
+            <div>
+                <h1 class="premade-heading">Choose from a Variety of Pre-Made Packages</h1>
+            </div>
+            <form action="/selectpremadepack" method="POST">
+                <div class="row first-prepack-row premade-package-item">
+                    <div class="col-lg-5 mx-auto my-auto premade-package-container ">
+                        <h2 class="premade-package-heading">Grandeur Package</h2>
+                        <p>includes:</p>
+                        <ul>
+                            <!--Venues-->
+                            <% venues.forEach(function(venue){ %>
+                                <% if(venue.key == 2) { %>
+                                    <li class="premade-package-service"><%=venue.name%></li>
+                                <% } %>
+                            <% }) %>
+                            
+                            <!--Photographers-->
+                            <% photos.forEach(function(photo){ %>
+                                <% if(photo.key == 2) { %>
+                                    <li class="premade-package-service"><%=photo.name%></li>
+                                <% } %>
+                            <% }) %>
+        
+                            <!--Tailors-->
+                            <% tailors.forEach(function(tailor){ %>
+                                <% if(tailor.key == 2) { %>
+                                    <li class="premade-package-service"><%=tailor.name%></li>
+                                <% } %>
+                            <% }) %>
+        
+                            <!--Hair and Makeup Artists-->
+                            <% hmuas.forEach(function(hmua){ %>
+                                <% if(hmua.key == 2) { %>
+                                    <li class="premade-package-service"><%=hmua.name%></li>
+                                <% } %>
+                            <% }) %>
+        
+                            <!--Bridal Car Rentals-->
+                            <% bridalcars.forEach(function(bridalcar){ %>
+                                <% if(bridalcar.key == 2) { %>
+                                    <li class="premade-package-service"><%=bridalcar.name%></li>
+                                <% } %>
+                            <% }) %>
+                        </ul>
+                        <button type="submit" name="premade" class="btn btn-primary col-5 btn-lg btn-premade-select" value=2>Select Package</button>
+                        <div class="attribution2">
+                            <h6 class="light">Photo by <a href="https://unsplash.com/@arshadpooloo">Arshad Pooloo</a> on <a href="https://unsplash.com/photos/GdwWrLHdwpw">Unsplash</a></h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <img class="premade-package-imageright" src="images/Venue-Home-Image.jpg" alt="Sample Wedding Venue">
+                    </div>
+                </div>
+                <div class="row second-prepack-row">
+                    <div class="col-lg-7">
+                        <img class="premade-package-imageleft" src="images/Photography-Home-Image.jpg" alt="Sample Wedding Photographer">
+                    </div>
+                    <div class="col-lg-5 mx-auto my-auto premade-package-container">
+                        <h2 class="premade-package-heading">Luxury Package</h2>
+                        <p>includes:</p>
+                        <ul>
+                            <% venues.forEach(function(venue){ %>
+                                <% if(venue.key == 3) { %>
+                                    <li class="premade-package-service"><%=venue.name%></li>
+                                <% } %>
+                            <% }) %>
+                            
+                            <!--Photographers-->
+                            <% photos.forEach(function(photo){ %>
+                                <% if(photo.key == 3) { %>
+                                    <li class="premade-package-service"><%=photo.name%></li>
+                                <% } %>
+                            <% }) %>
+        
+                            <!--Tailors-->
+                            <% tailors.forEach(function(tailor){ %>
+                                <% if(tailor.key == 3) { %>
+                                    <li class="premade-package-service"><%=tailor.name%></li>
+                                <% } %>
+                            <% }) %>
+        
+                            <!--Hair and Makeup Artists-->
+                            <% hmuas.forEach(function(hmua){ %>
+                                <% if(hmua.key == 3) { %>
+                                    <li class="premade-package-service"><%=hmua.name%></li>
+                                <% } %>
+                            <% }) %>
+        
+                            <!--Bridal Car Rentals-->
+                            <% bridalcars.forEach(function(bridalcar){ %>
+                                <% if(bridalcar.key == 3) { %>
+                                    <li class="premade-package-service"><%=bridalcar.name%></li>
+                                <% } %>
+                            <% }) %>
+                        </ul>
+                        <button type="submit" name="premade" class="btn btn-primary col-5 btn-lg btn-premade-select" value=3>Select Package</button>
+                        <div class="attribution2">
+                            <h6 class="light">Photo by <a href="https://unsplash.com/@annajimenez">
+                                Anna Jiménez Calaf</a> on <a href="https://unsplash.com/photos/0JnbLFcriM4">Unsplash</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="row third-prepack-row">
+                    <div class="col-lg-5 mx-auto my-auto premade-package-container">
+                        <h2 class="premade-package-heading">Elegant Package</h2>
+                        <p>includes:</p>
+                        <ul>
+                            <% venues.forEach(function(venue){ %>
+                                <% if(venue.key == 4) { %>
+                                    <li class="premade-package-service"><%=venue.name%></li>
+                                <% } %>
+                            <% }) %>
+                            
+                            <!--Photographers-->
+                            <% photos.forEach(function(photo){ %>
+                                <% if(photo.key == 4) { %>
+                                    <li class="premade-package-service"><%=photo.name%></li>
+                                <% } %>
+                            <% }) %>
+        
+                            <!--Tailors-->
+                            <% tailors.forEach(function(tailor){ %>
+                                <% if(tailor.key == 4) { %>
+                                    <li class="premade-package-service"><%=tailor.name%></li>
+                                <% } %>
+                            <% }) %>
+        
+                            <!--Hair and Makeup Artists-->
+                            <% hmuas.forEach(function(hmua){ %>
+                                <% if(hmua.key == 4) { %>
+                                    <li class="premade-package-service"><%=hmua.name%></li>
+                                <% } %>
+                            <% }) %>
+        
+                            <!--Bridal Car Rentals-->
+                            <% bridalcars.forEach(function(bridalcar){ %>
+                                <% if(bridalcar.key == 4) { %>
+                                    <li class="premade-package-service"><%=bridalcar.name%></li>
+                                <% } %>
+                            <% }) %>
+                        </ul>
+                        <button type="submit" name="premade" class="btn btn-primary col-5 btn-lg btn-premade-select" value=4>Select Package</button>
+                        <div class="attribution2">
+                            <h6 class="light">Photo by <a href="https://unsplash.com/@annaclare97">
+                                Anna Docking</a> on <a href="https://unsplash.com/photos/p7v6X41PP4w">Unsplash</a></h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <img class="premade-package-imageright" src="images/Tailor-Home-Image.jpg" alt="Sample Wedding Tailor">
+                    </div>
+                </div>
+                <div class="row fourth-prepack-row">
+                    <div class="col-lg-7">
+                        <img class="premade-package-imageleft" src="images/HMUA-Home-Image.jpg" alt="Sample Wedding HMUA">
+                    </div>
+                    <div class="col-lg-5 mx-auto my-auto premade-package-container">
+                        <h2 class="premade-package-heading">Memorable Package</h2>
+                        <p>includes:</p>
+                        <ul>
+                            <% venues.forEach(function(venue){ %>
+                                <% if(venue.key == 5) { %>
+                                    <li class="premade-package-service"><%=venue.name%></li>
+                                    <% } %>
+                                <% }) %>
+                                
+                            <!--Photographers-->
+                            <% photos.forEach(function(photo){ %>
+                                <% if(photo.key == 5) { %>
+                                    <li class="premade-package-service"><%=photo.name%></li>
+                                <% } %>
+                            <% }) %>
+        
+                            <!--Tailors-->
+                            <% tailors.forEach(function(tailor){ %>
+                                <% if(tailor.key == 5) { %>
+                                    <li class="premade-package-service"><%=tailor.name%></li>
+                                <% } %>
+                            <% }) %>
+        
+                            <!--Hair and Makeup Artists-->
+                            <% hmuas.forEach(function(hmua){ %>
+                                <% if(hmua.key == 5) { %>
+                                    <li class="premade-package-service"><%=hmua.name%></li>
+                                <% } %>
+                            <% }) %>
+        
+                            <!--Bridal Car Rentals-->
+                            <% bridalcars.forEach(function(bridalcar){ %>
+                                <% if(bridalcar.key == 5) { %>
+                                    <li class="premade-package-service"><%=bridalcar.name%></li>
+                                <% } %>
+                            <% }) %>
+                        </ul>
+                        <button type="submit" name="premade" class="btn btn-primary col-5 btn-lg btn-premade-select" value=5>Select Package</button>
+                        <div class="attribution2">
+                            <h6 class="light">Photo by <a href="https://unsplash.com/@freestocks">
+                                freestocks</a> on <a href="https://unsplash.com/photos/AFvUO61NlOU">Unsplash</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="row fifth-prepack-row">
+                    <div class="col-lg-5 mx-auto my-auto premade-package-container">
+                        <h2 class="premade-package-heading">Regular Package</h2>
+                        <p>includes:</p>
+                        <ul>
+                            <% venues.forEach(function(venue){ %>
+                                <% if(venue.key == 6) { %>
+                                    <li class="premade-package-service"><%=venue.name%></li>
+                                    <% } %>
+                                <% }) %>
+                            
+                            <!--Photographers-->
+                            <% photos.forEach(function(photo){ %>
+                                <% if(photo.key == 6) { %>
+                                    <li class="premade-package-service"><%=photo.name%></li>
+                                <% } %>
+                            <% }) %>
+        
+                            <!--Tailors-->
+                            <% tailors.forEach(function(tailor){ %>
+                                <% if(tailor.key == 6) { %>
+                                    <li class="premade-package-service"><%=tailor.name%></li>
+                                <% } %>
+                            <% }) %>
+        
+                            <!--Hair and Makeup Artists-->
+                            <% hmuas.forEach(function(hmua){ %>
+                                <% if(hmua.key == 6) { %>
+                                    <li class="premade-package-service"><%=hmua.name%></li>
+                                <% } %>
+                            <% }) %>
+        
+                            <!--Bridal Car Rentals-->
+                            <% bridalcars.forEach(function(bridalcar){ %>
+                                <% if(bridalcar.key == 6) { %>
+                                    <li class="premade-package-service"><%=bridalcar.name%></li>
+                                <% } %>
+                            <% }) %>
+                        </ul>
+                        <button type="submit" name="premade" class="btn btn-primary col-5 btn-lg btn-premade-select" value=6>Select Package</button>
+                        <div class="attribution2">
+                            <h6 class="light">Photo by <a href="https://unsplash.com/@wedding_dreamz">
+                                Wedding Dreamz</a> on <a href="https://unsplash.com/photos/3T_17MM8AYw">Unsplash</a></h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <img class="premade-package-imageright" src="images/BridalCar-Home-Image.jpg" alt="Sample Wedding Bridal Car">
+                    </div>
+                </div>
+                <div class="row sixth-prepack-row">
+                    <div class="col-lg-7">
+                        <img class="premade-package-imageleft" src="images/Simple-Package-Image.jpg" alt="Simple Package Image">
+                    </div>
+                    <div class="col-lg-5 mx-auto my-auto premade-package-container">
+                        <h2 class="premade-package-heading">Simple Package</h2>
+                        <p>includes:</p>
+                        <ul>
+                            <% venues.forEach(function(venue){ %>
+                                <% if(venue.key == 7) { %>
+                                    <li class="premade-package-service"><%=venue.name%></li>
+                                    <% } %>
+                                <% }) %>
+                                
+                            <!--Photographers-->
+                            <% photos.forEach(function(photo){ %>
+                                <% if(photo.key == 7) { %>
+                                    <li class="premade-package-service"><%=photo.name%></li>
+                                <% } %>
+                            <% }) %>
+        
+                            <!--Tailors-->
+                            <% tailors.forEach(function(tailor){ %>
+                                <% if(tailor.key == 7) { %>
+                                    <li class="premade-package-service"><%=tailor.name%></li>
+                                <% } %>
+                            <% }) %>
+        
+                            <!--Hair and Makeup Artists-->
+                            <% hmuas.forEach(function(hmua){ %>
+                                <% if(hmua.key == 7) { %>
+                                    <li class="premade-package-service"><%=hmua.name%></li>
+                                <% } %>
+                            <% }) %>
+        
+                            <!--Bridal Car Rentals-->
+                            <% bridalcars.forEach(function(bridalcar){ %>
+                                <% if(bridalcar.key == 7) { %>
+                                    <li class="premade-package-service"><%=bridalcar.name%></li>
+                                <% } %>
+                            <% }) %>
+                        </ul>
+                        <button type="submit" name="premade" class="btn btn-primary col-5 btn-lg btn-premade-select" value=7>Select Package</button>
+                        <div class="attribution2">
+                            <h6 class="light">Photo by <a href="https://unsplash.com/@guanfranco">
+                                Guanfranco G</a> on <a href="https://unsplash.com/photos/82p7JgzKOpo">Unsplash</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" name="tpackType" id="packType" value="Premade">
+            </form>
+        </div>
+    </section>
+</div>
+

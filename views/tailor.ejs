@@ -1,0 +1,51 @@
+<%- include("partials/header.ejs") %>
+
+<div class="body">
+    <section id="tailor-page">
+        <div>
+            <div class="service-page-head">
+                <h1 class="service-page-heading">Tailors</h1>
+                <p class="service-page-text">Get the best suit and gown for the best day.</p>
+            </div>
+            <hr>
+            <div class="service-content">
+                <div class="services-container-fluid">
+                    <ul >
+                        <% tailors.forEach(function(tailor){%>
+                            <% if(tailor.key > 1) { %>
+                                <li>
+                                    <div class="service-page-item">
+                                        <div class="row">
+                                            <div class="col-lg-3">
+                                                <div>
+                                                    <img class="service-page-image" src="images/Tailor-Home-Image.jpg" alt="Sample Tailor Picture">
+                                                    <div class="attribution2">
+                                                        <h6 class="light2">Photo by <a href="https://unsplash.com/@annaclare97">
+                                                            Anna Docking</a> on <a href="https://unsplash.com/photos/p7v6X41PP4w">Unsplash</a></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-9">
+                                                <div class="service-name">
+                                                    <h3><%=tailor.name%></h3>
+                                                </div>
+                                                <div class="service-description">
+                                                    <p><%=tailor.description%></p>
+                                                </div>
+                                                <div class="service-buttons text-end">
+                                                    <button class="service-btn btn btn-large">Inquire</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </li>
+                            <% } %>
+                        <%  }) %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<%- include("partials/footer.ejs") %>

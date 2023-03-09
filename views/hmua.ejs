@@ -1,0 +1,51 @@
+<%- include("partials/header.ejs") %>
+
+<div class="body">
+    <section id="hmua-page">
+        <div>
+            <div class="service-page-head">
+                <h1 class="service-page-heading">Hair and Makeup Artists</h1>
+                <p class="service-page-text">Life may not be perfect, but your hair and makeup can be.</p>
+            </div>
+            <hr>
+            <div class="service-content">
+                <div class="services-container-fluid">
+                    <ul >
+                        <% hmuas.forEach(function(hmua){%>
+                            <% if(hmua.key > 1) { %>
+                                <li>
+                                    <div class="service-page-item">
+                                        <div class="row">
+                                            <div class="col-lg-3">
+                                                <div>
+                                                    <img class="service-page-image" src="images/HMUA-Home-Image.jpg" alt="Sample HMUA Picture">
+                                                    <div class="attribution2">
+                                                        <h6 class="light2">Photo by <a href="https://unsplash.com/@freestocks">
+                                                            freestocks</a> on <a href="https://unsplash.com/photos/AFvUO61NlOU">Unsplash</a></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-9">
+                                                <div class="service-name">
+                                                    <h3><%=hmua.name%></h3>
+                                                </div>
+                                                <div class="service-description">
+                                                    <p><%=hmua.description%></p>
+                                                </div>
+                                                <div class="service-buttons text-end">
+                                                    <button class="service-btn btn btn-large">Inquire</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </li>
+                            <% } %>
+                        <%  }) %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,51 @@
+<%- include("partials/header.ejs") %>
+
+<div class="body">
+    <section id="bridalcar-page">
+        <div>
+            <div class="service-page-head">
+                <h1 class="service-page-heading">Bridal Car Rentals</h1>
+                <p class="service-page-text">A special ride for a very special day.</p>
+            </div>
+            <hr>
+            <div class="service-content">
+                <div class="services-container-fluid">
+                    <ul >
+                        <% bridalcars.forEach(function(bridalcar){%>
+                            <% if(bridalcar.key > 1) { %>
+                                <li>
+                                    <div class="service-page-item">
+                                        <div class="row">
+                                            <div class="col-lg-3">
+                                                <div>
+                                                    <img class="service-page-image" src="images/BridalCar-Home-Image.jpg" alt="Sample Bridal Car Picture">
+                                                    <div class="attribution2">
+                                                        <h6 class="light2">Photo by <a href="https://unsplash.com/@wedding_dreamz">
+                                                            Wedding Dreamz</a> on <a href="https://unsplash.com/photos/3T_17MM8AYw">Unsplash</a></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-9">
+                                                <div class="service-name">
+                                                    <h3><%=bridalcar.name%></h3>
+                                                </div>
+                                                <div class="service-description">
+                                                    <p><%=bridalcar.description%></p>
+                                                </div>
+                                                <div class="service-buttons text-end">
+                                                    <button class="service-btn btn btn-large">Inquire</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </li>
+                            <% } %>
+                        <%  }) %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<%- include("partials/footer.ejs") %>

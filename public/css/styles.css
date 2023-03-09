@@ -1,0 +1,764 @@
+body {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+hr {
+    opacity: 0.5;
+    width: 50%;
+    border: 10px dotted #9c3449;
+    border-bottom: none;
+    margin: 0 auto;
+}
+
+hr.finalize-hr {
+    opacity: 0.5;
+    width: 100%;
+    border: 5px dotted #9c3449;
+    border-bottom: none;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.body {
+    
+}
+
+.body-container-fluid {
+    padding: 7% 15%;
+}
+
+.services-container-fluid {
+    padding: 1% 4% 3% 4%;
+}
+
+.light-section {
+    padding: 2% 0;
+    background-color: #e5dcd5;
+}
+
+.special-light-section {
+    padding: 2% 0 0 0;
+    background-color: #e5dcd5;
+}
+
+.colored-section{
+    padding: 2% 0;
+    background-image: url("../images/WeddingBossRemastered\ Home\ BACKGROUND.png");
+    background-size: auto;
+}
+
+.nav-item {
+    padding: 0 1rem;
+    font-weight: bold;   
+}
+
+.nav-link {
+    color: #9c3449;
+}
+
+.nav-link:hover {
+    color: #eeeeee;
+}
+
+.navbar-text {
+    font-size: 1.15rem;
+}
+
+.dropdown-menu {
+    background-color: #F9B5D0;
+}
+
+.home-intro{
+    text-align: left;
+    color: #9c3449;
+}
+
+.form-container-fluid {
+    padding: 6% 20%;
+}
+
+.card {
+    padding: 3% 8%;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.form-control {
+    padding: 2%
+}
+
+.form-group {
+    text-align: left;
+    padding: 2% 1%;
+}
+
+.main-form-group {
+    padding-bottom: 4%
+}
+
+.form-control {
+    border-radius: 15px;
+}
+
+.h1-heading {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.h1-home-heading {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.home-image {
+    height: 95%;
+    width: 95%;
+}
+
+.intro-paragraph {
+    font-size: 1.5rem;
+}
+
+.attribution {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.attribution2 {
+    margin-top: 1rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.attribution3 {
+    margin-top: 0.25rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.light {
+    font-size: 1rem;
+    color: #9c3449;
+}
+
+.light2 {
+    font-size: 0.85rem;
+    color: #9c3449;
+}
+
+.checkbox {
+    padding: 1% 0;
+}
+
+.login-register-btn {
+    font-size: 1.5rem;
+    padding: 1% 0;
+    border: none;
+    background-color: #FF597B;
+}
+
+.login-register-btn:hover {
+    background-color: #F9B5D0;
+}
+
+.home-learn-btn {
+    font-size: 1.5rem;
+    padding: 1% 0;
+    border: none;
+    background-color: #9c3449;
+}
+
+.home-learn-btn:hover {
+    background-color: #FF597B;
+}
+
+.WBlogo {
+    height: 125px;
+    width: 125px;
+    position: relative;
+    border-radius: 150px;
+    margin-bottom: 3%;
+}
+
+.account-WBlogo {
+    height: 125px;
+    width: 125px;
+    position: relative;
+    border-radius: 150px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.feature-icons {
+    color: #9c3449;
+    font-size: 4rem;
+    margin-bottom: 6%;
+}
+
+.user-icon {
+    margin-top: 5px;
+    font-size: 2rem;
+    color: white;
+}
+
+.feature-icons:hover {
+    color: #FF597B;
+}
+
+.features-text {
+    color: #9c3449;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.home-text-box {
+    padding-left: 6%;
+    padding-right: 6%; 
+    padding-bottom: 5%;
+}
+
+.services-section-headers {
+    padding-top: 7%;
+    font-family: 'Great Vibes', cursive;
+    color: #9c3449;
+    font-weight: 400;
+    font-size: 5rem;
+}
+
+.services-section-text {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.testimonial-box {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 5% 6%;
+    background-color: #eeeeee;
+}
+
+.testimonial-rows {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.testimonial-name{
+    margin: 0;
+    padding: 0;
+}
+
+.testimonial-text {
+    padding-top: 7%;
+}
+
+.testimonial-profile-pic {
+    width: 10.5%;
+    border-radius: 50%;
+    background-color: #9c3449;
+    padding: 0;
+}
+
+.adjust-space {
+    padding-left: 3%;
+}
+
+.home-intro-centered{
+    color: #9c3449;
+    padding: 2% 0;
+}
+
+.cta-heading {
+    color: #9c3449;
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+    font-size: 4.5rem;
+    line-height: 1.5;
+    padding-bottom: 2rem;
+}
+
+.start-button {
+    background-color: #9c3449;
+    color: white;
+    font-weight: 600;
+    font-size: 1.75rem;
+    padding: 1.5% 0;
+}
+
+.start-button:hover {
+    background-color: #FF597B;
+    color: white;
+}
+
+.social-icons {
+    padding: 2rem 1rem;
+    font-size: 2rem;
+}
+
+.youtube {
+    color: red
+}
+
+.github {
+    color: black;
+}
+
+.service-page-head {
+    padding-bottom: 2rem;
+}
+
+.service-page-heading {
+    text-align: left;
+    color: #9c3449;
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+    font-size: 6rem;
+    padding-left: 3rem;
+}
+
+.service-page-text {
+    padding-left: 3rem;
+    padding-bottom: 1rem;
+    text-align: left;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.service-page-item {
+    margin: 4% 0;
+    padding: 2%;
+    background-color: #eeeeee;
+}
+
+.service-page-image {
+    height: 100%;
+    width: 100%;
+}
+
+.service-name, .service-description {
+    padding-top: 2%;
+    padding-left: 2%;
+    text-align: left;
+}
+
+.service-description {
+    padding-bottom: 2%;
+}
+
+.service-btn {
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    background-color: #9c3449;
+    color: #e5dcd5;
+    padding: 0.50rem 2rem 0.50rem 2rem;
+    margin-right: 1.5rem;
+}
+
+.service-btn:hover {
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    background-color: #FF597B;
+    color: #e5dcd5;
+    padding: 0.50rem 2rem 0.50rem 2rem;
+    margin-right: 1.5rem;
+}
+
+.select-package-heading {
+    color: #9c3449;
+    font-weight: 700;
+    font-size: 3rem;
+    padding: 1% 0;
+}
+
+.select-package-name {
+    font-weight: 600;
+    font-size: 2.5rem;
+    padding-bottom: 10%;
+}
+
+.select-package-icons {
+    color: #9c3449;
+    font-size: 7rem;
+}
+
+.choice-containers {
+    padding: 2% 6%;
+}
+
+.package-box {
+    display: block;
+    text-decoration: none;
+
+    border: 1px solid #9c3449;
+    border-radius: 25px;
+    background-color: #FF8E9E;
+    color: #9c3449;
+    padding: 7% 1%;
+    margin: 4% auto;
+}
+
+.package-box:hover{
+    background-color: #F9B5D0;
+}
+
+.premade-heading {
+    font-weight: 700;
+    font-size: 2.75rem;
+    padding-bottom: 3%;
+    color: #9c3449;
+}
+
+.premade-package-heading {
+    color: #9c3449;
+    font-weight: 700;
+    font-size: 1.75rem;
+}
+
+.first-prepack-row, .third-prepack-row, .fifth-prepack-row {
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    background-color: #F9B5D0;
+}
+
+.second-prepack-row, .fourth-prepack-row, .sixth-prepack-row {
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+}
+
+.premade-package-imageright {
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(
+    100% 0%,
+    0% 0%,
+    25% 0%,
+    0% 100%,
+    100% 100% 
+  );
+}
+
+.premade-package-imageleft {
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(50% 0, 75% 50%, 100% 100%, 0 100%, 0 0);
+}
+
+.btn-premade-select {
+    background-color: #9c3449;
+    color: #e5dcd5;
+    border: none;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.btn-premade-select:hover {
+    background-color:  #FF597B;
+    color: #e5dcd5;
+    border: none;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.premade-package-service {
+    color: #9c3449;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.custompack-name {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+
+.custompack-name, .custompack-description {
+    color: #9c3449;
+}
+
+.service-custom-image {
+    aspect-ratio: 20 / 12;
+    height: 100%;
+    width: 100%;
+}
+
+.service-custom-image1 {
+    aspect-ratio: 20 / 12;
+    height: 100%;
+    width: 100%;
+}
+
+.card {
+    margin: 2%;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    margin-bottom: 25%;
+}
+
+.carousel-indicators {
+    margin-bottom: 25%;
+}
+
+.special-indicators {
+    margin-bottom: 25%;
+}
+
+.service-caption {
+    
+}
+
+.button-section {
+    padding: 2%;
+}
+
+.blocked-label {
+    display: block;
+}
+
+.custom-textarea {
+    height: 5rem;
+    width: 100%;
+}
+
+.finalize-button {
+    padding: 1%;
+    margin-bottom: 2%;
+    border: none;
+    background-color: #9c3449;
+    color: #eeeeee;
+}
+
+.finalize-button:hover {
+    padding: 1%;
+    margin-bottom: 2%;
+    border: none;
+    background-color: #FF8E9E;
+    color: #eeeeee;
+}
+
+.finalize-item {
+    margin: 0 auto;
+    float: left;
+}
+
+.finalize-item-heading {
+    padding: 1rem;
+    color: #9c3449;
+    margin: 0;
+}
+
+.finalize-item-content {
+    margin: 0;
+    padding: 1rem;
+    color: #9c3449;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.finalize-package-heading {
+    color: #9c3449;
+    font-weight: 700;
+    font-size: 2.5 rem;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+.summary-container {
+    padding: 5% auto;
+    background-color: #eeeeee;
+    border-radius: 25px;
+    margin: auto 20% 3% 20%;
+}
+
+.account-summary-container {
+    padding: 5% auto 7% auto;
+    background-color: #eeeeee;
+    border-radius: 25px;
+    margin: auto 20% auto 20%;
+}
+
+.account-container {
+    padding-bottom: 5rem;
+}
+
+.form-container {
+    margin: auto 10%;
+}
+
+.form-label {
+    margin: 0;
+    padding: 1rem;
+    color: #9c3449;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.form-text {
+    padding: 0 0 1rem 0;
+}
+
+@media (max-width: 600px) {
+    .h1-home-heading {
+        font-weight: 700;
+        font-size: 1.6rem;
+    }
+
+    .intro-paragraph {
+        display: none;
+    }
+
+    .light {
+        font-size: 0.75rem;
+        color: #9c3449;
+    }
+
+    .home-heading-content {
+        padding-top: 6%;
+        padding-bottom: 6%;
+    }
+
+    .premade-package-imageright{
+        padding-top: 4%;
+        padding-bottom: 4%; 
+        height: 100%;
+        width: 100%;
+        clip-path: none;
+    }
+
+    .premade-package-imageleft{
+        padding-top: 4%;
+        padding-bottom: 4%; 
+        height: 100%;
+        width: 100%;
+        clip-path: none;
+    }
+
+    .premade-package-heading {
+        color: #9c3449;
+        font-weight: 700;
+        font-size: 1.75rem;
+        padding: 5% 0 1% 0;
+    }
+
+    .premade-package-container {
+        padding-bottom: 4%;
+    }
+
+    .carousel-indicators {
+        margin-bottom: 40%;
+    }
+
+    .special-indicators {
+        margin-bottom: 47%;
+    }
+
+    .summary-container {
+        padding: 5% auto;
+        background-color: #eeeeee;
+        border-radius: 25px;
+        margin: auto 5% 7% 5%;
+    }
+
+    .service-btn {
+        font-size: 1.5rem;
+        font-weight: 600;
+        border: none;
+        background-color: #9c3449;
+        color: #e5dcd5;
+        padding: 0.50rem 2rem 0.50rem 2rem;
+        margin-right: 0.5rem;
+    }
+
+    .service-btn:hover {
+        font-size: 1.5rem;
+        font-weight: 600;
+        border: none;
+        background-color: #FF597B;
+        color: #e5dcd5;
+        padding: 0.50rem 2rem 0.50rem 2rem;
+        margin-right: 0.5rem;
+    }
+
+    .button-section {
+        padding: 10%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .carousel-indicators {
+        margin-bottom: 30%;
+    }
+
+    .special-indicators {
+        margin-bottom: 30%;
+    }
+}
+
+
+#logo {
+    color: #9c3449;
+    font-family: 'Great Vibes', cursive;
+    font-weight: bold;
+    font-size: 3rem;
+    padding-right: 2rem;
+}
+
+#navbar-main {
+    background-image: url("../images/WeddingBossRemastered\ BACKGROUND\ 2.png");
+    background-size: contain;
+}
+
+#features {
+    background-image: url("../images/WeddingBossRemastered\ Home\ BACKGROUND.png");
+    background-size: contain;
+    padding: 5% 0;
+}
+
+#venue-page, #photography-page, #tailor-page, #hmua-page, #bridalcar-page {
+    /*
+    background-image: url("../images/WeddingBossRemastered\ Home\ BACKGROUND.png");
+    background-size: contain;
+    */
+    background-color: #e5dcd5;
+    padding: 5% 0;
+}
+
+#call-to-action {
+    background-image: url("../images/WeddingBossRemastered\ BACKGROUND\ 2.png");
+    padding: 7rem 0 4rem 0;
+}
+
+#copyright {
+    padding: 2rem 0 2rem 0;
+}
+
+#home-heading-image {
+    background-color: #e5dcd5;
+}
+
+#finalize-package-section {
+    background-image: url("../images/Finalize-Package-Image.png");
+    background-size: 100% 100%;
+}
+
+#account-page {
+    background-image: url("../images/WeddingBossRemastered\ Home\ BACKGROUND.png");
+    background-size: contain;
+}
+
+/*FONTS
+font-family: 'Great Vibes', cursive;
+font-family: 'Montserrat', sans-serif;
+*/
